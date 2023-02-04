@@ -60,7 +60,11 @@ form {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 15px;
+    height: 40px;
+    width: 700px;
+    border-radius: 5px;
 }
 
 .check {
@@ -69,13 +73,21 @@ form {
     width: 16px;
     border-radius: 100%;
     border: none;
+    margin: 0 15px;
+    cursor: pointer;
 }
 
-.check:active {
+.check.ativo {
     background-color: transparent;
     background-image: url(./assets/check-icon.png);
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+.item-dscr {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .btn-delete {
@@ -83,6 +95,8 @@ form {
     border: none;
     display: flex;
     cursor: pointer;
+    padding: 0;
+    margin: 0 15px;
 }
 
 .delete-icon {
