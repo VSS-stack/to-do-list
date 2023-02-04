@@ -23,12 +23,23 @@ function criarItem(event) {
 }
 
 function exibirItens(item) {
+    let check = document.createElement('button');
+    check.classList.add("check");
 
-    lista += lista.innerHTML =  `
-        <li class="item">
-            <button class="check"></button>
-            <p class="item-dscr">${item[item.length - 1]}</p>
-        <button class="btn-delete"><img class="delete-icon" src="./assets/close-icon.png" alt="icone excluir"></button>
-        </li>
-    `
+    let p = document.createElement('p');
+    p.classList.add("item-dscr");
+    p.innerText = item[item.length - 1];
+
+    let btnDelete = document.createElement('button');
+    btnDelete.classList.add('btn-delete');
+    btnDelete.innerHTML = '<img class="delete-icon" src="./assets/close-icon.png" alt="icone excluir">';
+
+    let elementoLista = document.createElement('li');
+    elementoLista.classList.add("item");
+
+    elementoLista.appendChild(check);
+    elementoLista.appendChild(p);
+    elementoLista.appendChild(btnDelete);
+    
+    lista.appendChild(elementoLista);
 }
