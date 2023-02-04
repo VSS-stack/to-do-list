@@ -10,19 +10,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" defer></script>
 </head>
 <body>
     <header class="cabecalho">
         <h1>To do list</h1>
     </header>
     <main class="principal">
-        <form action="">
+        <form action="#" id="form-tarefa">
             <input class="input" type="text" name="input" placeholder="Digite a tarefa">
             <input class="btn" type="submit" value="Adicionar">
         </form>
         <section class="lista">
-            <ul>
-                <li class="item">
+            <ul id="lista-itens">
+                <!-- <li class="item">
                     <button class="check"></button>
                     <p class="item-dscr">Comprar ração gatos</p>
                     <button class="btn-delete"><img class="delete-icon" src="./assets/close-icon.png" alt="icone excluir"></button>
@@ -31,7 +32,7 @@
                     <button class="check"></button>
                     <p class="item-dscr">Tirar lixo</p>
                     <button class="btn-delete"><img class="delete-icon" src="./assets/close-icon.png" alt="icone excluir"></button>
-                </li>
+                </li> -->
             </ul>
         </section>
     </main>
