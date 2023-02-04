@@ -10,6 +10,8 @@ form.addEventListener('submit', (event) => {
     criarItem(event);
 
     exibirItens(novosItens);
+
+    darCheckItens(btnCheck);
 });
 
 function criarItem(event) {
@@ -23,23 +25,33 @@ function criarItem(event) {
 }
 
 function exibirItens(item) {
-    let check = document.createElement('button');
-    check.classList.add("check");
+    btnCheck = document.createElement('button');
+    btnCheck.classList.add("check");
 
-    let p = document.createElement('p');
+    p = document.createElement('p');
     p.classList.add("item-dscr");
     p.innerText = item[item.length - 1];
 
-    let btnDelete = document.createElement('button');
+    btnDelete = document.createElement('button');
     btnDelete.classList.add('btn-delete');
     btnDelete.innerHTML = '<img class="delete-icon" src="./assets/close-icon.png" alt="icone excluir">';
 
-    let elementoLista = document.createElement('li');
+    elementoLista = document.createElement('li');
     elementoLista.classList.add("item");
 
-    elementoLista.appendChild(check);
+    elementoLista.appendChild(btnCheck);
     elementoLista.appendChild(p);
     elementoLista.appendChild(btnDelete);
     
     lista.appendChild(elementoLista);
+}
+
+function darCheckItens(botao) {
+    botao.addEventListener('click', (event) => {
+        if(event.target.classList[1] === 'ativo') {
+            event.target.classList.remove('ativo');
+        }else {
+            event.target.classList.add('ativo');
+        }
+    });
 }
