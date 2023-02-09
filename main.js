@@ -12,6 +12,8 @@ form.addEventListener('submit', (event) => {
     exibirItens(novosItens);
 
     darCheckItens(btnCheck);
+
+    deletarItens(btnDelete);
 });
 
 function criarItem(event) {
@@ -20,8 +22,6 @@ function criarItem(event) {
     novosItens[novosItens.length] = novoItem.value;
 
     novoItem.value = '';
-
-    console.log(novosItens);
 }
 
 function exibirItens(item) {
@@ -53,5 +53,12 @@ function darCheckItens(botao) {
         }else {
             event.target.classList.add('ativo');
         }
+    });
+}
+
+function deletarItens(botao) {
+    botao.addEventListener('click', (event) => {
+        event.target.parentNode.parentNode.remove();
+        novosItens.splice(novosItens.indexOf(event.target.parentNode.parentNode.childNodes[1].innerText), 1);
     });
 }
