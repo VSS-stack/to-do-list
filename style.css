@@ -16,7 +16,7 @@ body {
 
 .cabecalho {
     font-weight: bold;
-    font-size: 5em;
+    font-size: 2.5em;
     text-transform: uppercase;
     margin: 50px auto 40px;
 }
@@ -28,7 +28,7 @@ form {
 }
 
 .input {
-    width: 469px;
+    width: 90vw;
     padding: 5px;
     margin: 0 auto 10px;
     font-family: 'Montserrat', sans-serif;
@@ -62,8 +62,7 @@ form {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 15px;
-    height: 40px;
-    width: 700px;
+    width: 90vw;
     border-radius: 5px;
 }
 
@@ -88,6 +87,7 @@ form {
     flex-grow: 1;
     display: flex;
     justify-content: flex-start;
+    padding: 10px 0;
 }
 
 .btn-delete {
@@ -101,4 +101,18 @@ form {
 
 .delete-icon {
     height: 16px;
+}
+
+@media screen and (min-width: 767px) {
+    .cabecalho {
+        font-size: 5em;
+    }
+
+    .input {
+        width: 469px;
+    }
+
+    .item {
+        width: 700px;
+    }
 }
